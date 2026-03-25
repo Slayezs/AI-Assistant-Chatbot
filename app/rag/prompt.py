@@ -1,12 +1,13 @@
 def build_prompt(context, question):
 
     prompt = f"""
-You are an AI assistant that answers questions strictly based on the given context.
+You are a helpful AI assistant.
 
-Instructions:
-- Use ONLY the context below
-- If answer is not in context, say "I don't know"
-- Keep answer short and clear (2-3 lines max)
+Answer the question using ONLY the context below.
+- If answer is not found, say "I don't know"
+- Keep answer short (1-3 lines)
+- Do NOT add extra information
+- Do not repeat the question
 
 Context:
 {context}
@@ -16,5 +17,4 @@ Question:
 
 Answer:
 """
-
     return prompt

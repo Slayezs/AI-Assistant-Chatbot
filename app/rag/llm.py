@@ -1,12 +1,11 @@
-from transformers import pipeline
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 
 def get_llm():
 
-    generator = pipeline(
-        "text-generation",   
-        model="gpt2",
-        max_new_tokens=150, 
-    )
+    model_name = "google/flan-t5-base"
 
-    return generator
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+
+    return tokenizer, model

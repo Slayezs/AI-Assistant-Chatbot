@@ -2,3 +2,8 @@ vector_store/
 __pycache__/
 *.pyc
 .env
+data/
+.cache/
+.vscode/
+.idea/
+.DS_Store
